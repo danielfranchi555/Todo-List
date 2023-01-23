@@ -1,0 +1,26 @@
+.list-Container{
+    border: solid 2px white;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0  auto;
+    width: 600px;
+    box-shadow: 5px 0px 10px white ;
+    .ul-List{
+        margin: 20px;
+        color: black;
+        font-size: 20px;
+        border: solid 2ox black;
+        li{
+            margin: 13px;
+            border-radius: 10px;
+            padding-left: 10px;
+            height: 40px;
+            background-color: rgb(249, 249, 249);
+        }
+        .icon-delete{
+            width: 25px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
