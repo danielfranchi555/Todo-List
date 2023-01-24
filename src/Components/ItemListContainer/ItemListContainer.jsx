@@ -35,7 +35,8 @@ export const ItemListContainer = () => {
 
   }
   return (
-    <div className="item-List-Container " >
+    <div className="item-List-Container mt-5 py-5" >
+      <h1 className="text-center">Todo List</h1>
       <Form tasks={tasks} addTask={addTask} setTasks={setTasks}></Form>
       <ItemList tasks ={tasks} deleteTask={deleteTask} setCheck={setCheck}  className='container' deleteAll={deleteAll}/>
     </div>

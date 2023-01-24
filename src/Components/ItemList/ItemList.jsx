@@ -13,6 +13,7 @@ const ItemList = ({tasks,deleteTask,deleteAll,setCheck}) => {
   } 
   return (
     <div className='list-Container' >
+
         <ul className='ul-List'>
             {tasks.map((item)=>(
             <li className='d-flex bg-primary' key={item.id} style={ {justifyContent:'space-between'}} >
