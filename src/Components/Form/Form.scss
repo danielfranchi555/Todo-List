@@ -1,5 +1,15 @@
 .Form-Container{
     margin: 0 auto;
-    width: 500px;
+   max-width: 400px;
     margin-bottom: 20px;
+   form{
+    width: auto;
+     input{
+        width: 100%;
+     }
+     .btn-Add{
+        width: 50px;
+        text-align: center;
+     }
+   }
 }

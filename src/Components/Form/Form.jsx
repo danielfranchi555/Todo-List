@@ -34,10 +34,10 @@ console.log(valueInput)
             name='task'
             onChange={handleChange}
             value={valueInput.task}
-            className='form-control text-center'
+            className=' text-center form-control w-100'
              />
              <div className='text-center'>
-                           <input type="submit" value='Add' className='btn  btn btn-outline-primary mt-3'/>
+                           <input type="submit" value='Add' className='btn btn-Add btn btn-outline-primary mt-3'/>
 
              </div>
         </form>

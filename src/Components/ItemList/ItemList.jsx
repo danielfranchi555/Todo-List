@@ -29,7 +29,7 @@ const ItemList = ({tasks,deleteTask,deleteAll,setCheck}) => {
         ))} 
         </ul>
         {tasks.length > 0 && 
-           <div className='text-center'>
+           <div className='div-button-delete-all'>
             <button  onClick={()=>deleteAll()} className='btn btn-danger'>Delete All</button>
            </div>
         }
