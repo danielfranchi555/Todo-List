@@ -15,7 +15,7 @@ const ItemList = ({tasks,deleteTask,deleteAll,setCheck}) => {
     <div className='list-Container' >
         <ul className='ul-List'>
             {tasks.map((item)=>(
-            <li className='d-flex bg-' key={item.id} style={ {justifyContent:'space-between'}} >
+            <li className='d-flex bg-primary' key={item.id} style={ {justifyContent:'space-between'}} >
               <div >
             <input type="checkbox" className={item.completed?'background-color:red':'background-color:blue'} checked={item.completed} onChange={()=>setCheck(item.id)} />
               </div>
@@ -30,7 +30,7 @@ const ItemList = ({tasks,deleteTask,deleteAll,setCheck}) => {
         </ul>
         {tasks.length > 0 && 
            <div className='div-button-delete-all'>
-            <button  onClick={()=>deleteAll()} className='btn btn-danger'>Delete All</button>
+            <button  onClick={()=>deleteAll()} className='btn btn-dark'>Delete All</button>
            </div>
         }
     </div>
