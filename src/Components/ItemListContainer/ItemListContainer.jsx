@@ -4,12 +4,7 @@ import ItemList from "../ItemList/ItemList";
 import'./ItemListContainer.scss'
 
 export const ItemListContainer = () => {
-  const arrayTasks = [
-    { id: 1, task: "ir de compras", completed: false },
-    { id: 2, task: "sacar al perro", completed: false },
-    { id: 3, task: " ir al gimnasio", completed: true },
-    { id: 4, task: "estudiar", completed: false }
-  ];
+
 
   const [tasks,setTasks]= useState([])
 

@@ -4,9 +4,7 @@ import trash from '../Icons/trash.png'
 
 const ItemList = ({tasks,deleteTask,deleteAll,setCheck}) => {
  
-  const myStyle = {
-    textDecoration:'linethrough'
-  } 
+  
 
    if(tasks.length === 0){
    return <p className='text-center' style={{fontFamily:'sans-serif',fontSize:'30px',color:'black'}}> No hay tareas</p>
@@ -18,10 +16,10 @@ const ItemList = ({tasks,deleteTask,deleteAll,setCheck}) => {
             {tasks.map((item)=>(
             <li className='d-flex bg-primary' key={item.id} style={ {justifyContent:'space-between'}} >
               <div >
-            <input type="checkbox" className={item.completed?'background-color:red':'background-color:blue'} checked={item.completed} onChange={()=>setCheck(item.id)} />
+            <input type="checkbox"  checked={item.completed} onChange={()=>setCheck(item.id)} />
               </div>
             <div  >
-           <p>{item.task} </p> 
+           <p style={{textDecoration: item.completed? 'line-through':'none'}} >{item.task} </p> 
             </div>
             <div> 
                <button className='btn' onClick={()=>deleteTask(item.id)}> <img src={trash} className='icon-delete' alt="" /> </button>
