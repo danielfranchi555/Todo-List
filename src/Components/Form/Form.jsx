@@ -1,14 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Form.scss'
 
-const Form = ({addTask}) => {
+const Form = ({addTask,dataToEdit,updateTask}) => {
   const input = {
-    id:'',
+    id:null,
     task:'',
     completed:false,
   }
 
 const [valueInput,setValueInput]= useState(input)
+
+useEffect(()=>{
+  if(dataToEdit){
+    setValueInput(dataToEdit)
+  }
+},[dataToEdit])
 
 const handleChange=(e)=>{
   setValueInput({...valueInput,
@@ -18,30 +24,41 @@ const handleChange=(e)=>{
 
 const handleSubmit = (e)=>{
 e.preventDefault()
+
 if(!valueInput.task){
-  alert('ingresa la tarea ')
-}else{
-  addTask(valueInput)
+  return alert('ingresa la tarea')
 }
+
+if(valueInput.id === null){
+  addTask(valueInput)
+}else{
+  updateTask(valueInput)
+}
+
 setValueInput(input)
-console.log(valueInput)
 }
   return (
-    <div className='Form-Container  mt-5 '>
-        <form action="" onSubmit={handleSubmit}>
+    <div className='Form-Container  mt-4 '>
+            <form action="" className='d-flex' style={{justifyContent:'center',alignItems:'flex-end'}} onSubmit={handleSubmit}>
+          <div className='div-input'>
             <input 
             type="text" 
             placeholder='Add to task'
             name='task'
             onChange={handleChange}
             value={valueInput.task}
-            className=' text-center form-control w-100'
+            className='  form-control'
+
              />
-             <div className='text-center'>
-                           <input type="submit" value='Add' className='btn btn-Add btn btn-outline-primary mt-3'/>
+          </div>
+            
+             <div className='text-center' style={{marginLeft:'5px'}}>
+                           <input type="submit" value='+' className='btn btn-Add btn btn-dark -l mt-3'/>
 
              </div>
         </form>
+      
+    
     </div>
   )
 }

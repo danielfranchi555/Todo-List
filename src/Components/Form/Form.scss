@@ -4,8 +4,14 @@
     margin-bottom: 20px;
    form{
     width: auto;
-     input{
-        width: 100%;
+    .div-input{
+        
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        input{
+         width: 300px;
+        }
      }
      .btn-Add{
         width: 50px;
